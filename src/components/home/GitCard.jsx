@@ -32,7 +32,7 @@ const GitCard = ({ value }) => {
         const monthIndex = date.getMonth();
         const year = date.getFullYear();
 
-        return setUpdatedAt(`on ${day} ${monthNames[monthIndex]} ${year}`);
+        return setUpdatedAt(` ${day} ${monthNames[monthIndex]} ${year}`);
       }
     },
     [value.pushed_at]
@@ -42,15 +42,15 @@ const GitCard = ({ value }) => {
     handleUpdatetime();
   }, [handleUpdatetime]);
 
-  const { name, description, svn_url, stargazers_count, languages_url } = value;
-  
+  const { name, description, stargazers_count, languages_url } = value;
+
   return (
     <div className="col-md-12">
       <div className="card shadow-lg mb-5 rounded cardBgColor color-black">
         <div className="card-body">
-          <h5 className="card-title" style={{textTransform:'uppercase'}}>{name}</h5>
+          <h5 className="card-title" style={{ textTransform: 'uppercase' }}>{name}</h5>
           <p className="card-text">{description} </p>
-          <a
+          {/* <a
             href={`${svn_url}/archive/master.zip`}
             className="btn btn-outline-info mr-3"
           >
@@ -62,15 +62,15 @@ const GitCard = ({ value }) => {
             className="btn btn-outline-info"
           >
             <i className="fab fa-github" /> Repo
-          </a>
+          </a> */}
           <hr />
           <Language value={languages_url}></Language>
           <p className="card-text">
             <span className="text-dark card-link mr-4">
-              <i className="fab fa-github" /> Stars{" "}
-              <span className="badge badge-dark">{stargazers_count+5}</span>
+              <i className="fab fa-github" /> No.of Users{" "}
+              <span className="badge badge-dark">{stargazers_count + "+"}</span>
             </span>
-            <small className="text-muted">Updated {updated_at}</small>
+            <small className="text-muted">Worked Till {updated_at}</small>
           </p>
         </div>
       </div>

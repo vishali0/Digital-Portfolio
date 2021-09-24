@@ -122,7 +122,7 @@ const AboutMe = () => {
           <div className="col-md-5 mt-5">
             <p className="lead text-center"><span>Hi!</span><span className="wave-emoji">{emoji("👋")}</span>{aboutDescription}</p>
             {resumeLink && (
-              <p className="lead text-center">
+              <div className="lead text-center">
                 <a
                   href={resumeLink}
                   target="_blank"
@@ -130,15 +130,15 @@ const AboutMe = () => {
                   role="button"
                   aria-label="Resume/CV"
                 >
-                  <div class="btn-custom btn-two">
+                  <div className="btn-custom btn-two">
                     <span>Resume</span>
                   </div>
                 </a>
-              </p>
+              </div>
             )}
           </div>
           <div className="col-md-7">
-              <img className="aboutMe-avatar-sizing" src={process.env.PUBLIC_URL + 'programmer.svg'} alt="" />
+            <img className="aboutMe-avatar-sizing" src={process.env.PUBLIC_URL + 'programmer.svg'} alt="" />
           </div>
         </div>
       </div>

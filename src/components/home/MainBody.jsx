@@ -33,7 +33,7 @@ const MainBody = () => {
       <div id="stars"></div>
       <div className="container container-fluid text-center ">
         <h6 className="display-4">
-          {FirstName + " " +MiddleName+" "+ LastName}
+          {FirstName + " " + MiddleName + " " + LastName}
         </h6>
 
         <Typist className="lead"> {devDesc}</Typist>
@@ -55,13 +55,13 @@ const MainBody = () => {
             </a>
           ))}
         </div>
-        <a class="btn btn-slice" href="#aboutme" aria-label="Learn more about me">
-        <div class="top"><span>More About me</span></div>
-        <div class="bottom"><span>More About me</span></div>
-      </a>
+        <a className="btn btn-slice" href="#aboutme" aria-label="Learn more about me">
+          <div className="top"><span>More About me</span></div>
+          <div className="bottom"><span>More About me</span></div>
+        </a>
 
       </div>
-      
+
     </div>
   );
 };
